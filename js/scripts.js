@@ -5,21 +5,21 @@ $(document).ready(function() {
     var secondSide = $("#secondSide").val();
     var thirdSide = $("#thirdSide").val();
 
-    if (firstSide === "") {
-      $("#error1").text("error");
-    }
-    if (secondSide === "") {
-      $("#error2").text("error");
-    }
-    if (thirdSide === "") {
-      $("#error3").text("error");
-    }
+    // if (firstSide === "") {
+    //   $("#error1").text("error");
+    // }
+    // if (secondSide === "") {
+    //   $("#error2").text("error");
+    // }
+    // if (thirdSide === "") {
+    //   $("#error3").text("error");
+    // }
 
     firstSide = parseInt(firstSide);
     secondSide = parseInt(secondSide);
     thirdSide = parseInt(thirdSide);
 
-    if ((firstSide < (secondSide + thirdSide)) || (secondSide < (firstSide + thirdSide)) || (thirdSide < (secondSide + firstSide))) {
+    if ((firstSide > (secondSide + thirdSide)) || (secondSide > (firstSide + thirdSide)) || (thirdSide > (secondSide + firstSide))) {
       $(".result").text("non-existant");
     }
     else if ((firstSide === 0) || (secondSide === 0) || (thirdSide === 0)){
